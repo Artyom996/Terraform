@@ -2,6 +2,8 @@ provider "aws" {
   region = "eu-central-1"
 }
 
+#elastic_ip - privyazka ip k serveru po id
+
 resource "aws_eip" "my_static_ip" {
   instance = aws_instance.MyWEB.id
 }
