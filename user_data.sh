@@ -2,16 +2,17 @@
 yum -y update
 yum -y install httpd
 
-a=qwerty
-b=ytrewq!
+a=Artyom
+b=Dubinka
 
-myip = `curl http://192.168.213.128/latest/meta-data/local-ipv4`
+myip=`curl http://169.254.169.254/latest/meta-data/public-ipv4`
+
 
 cat <<EOF > /var/www/html/index.html
 <html>
 <body bgcolor="black">
-<h2><font color="gold">Hello!<h2></font>
-<h3><font color="red">$a<br>$b!<h3></font>
+<h1><font color="orange">Hello!<h1></font>
+<h3><font color="red">$a<br>$b<h3></font>
 
 <h2><font color="red">ServerIP: $myip </h2></font><br>
 
